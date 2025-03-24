@@ -11,5 +11,11 @@ class Driver extends Model
 
     protected $fillable = ['year','make','model','color','license_plate',];
 
-    
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function trips(){
+        return $this->belongsTo(Trip::class);
+    }
 }
